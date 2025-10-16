@@ -1,0 +1,52 @@
+{
+  "spdxVersion": "SPDX-3.0",
+  "creationInfo": {
+    "created": "2025-10-15T12:34:56Z",
+    "createdBy": [
+      {
+        "name": "ExampleSBOMGenerator",
+        "version": "1.4.2"
+      }
+    ]
+  },
+  "name": "example-webapp-spdx",
+  "dataLicense": "CC0-1.0",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-Package-ExampleWebApp",
+      "name": "example-webapp",
+      "versionInfo": "2.5.1",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "MIT",
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-Package-Express",
+      "name": "express",
+      "versionInfo": "4.18.2",
+      "downloadLocation": "https://registry.npmjs.org/express/-/express-4.18.2.tgz",
+      "licenseDeclared": "MIT",
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-Package-BodyParser",
+      "name": "body-parser",
+      "versionInfo": "1.20.2",
+      "downloadLocation": "https://registry.npmjs.org/body-parser/-/body-parser-1.20.2.tgz",
+      "licenseDeclared": "MIT",
+      "filesAnalyzed": false
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-Package-ExampleWebApp",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Package-Express"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-ExampleWebApp",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Package-BodyParser"
+    }
+  ]
+}

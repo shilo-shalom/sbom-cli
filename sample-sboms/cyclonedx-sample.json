@@ -1,0 +1,67 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-10-15T12:34:56Z",
+    "tools": [
+      {
+        "vendor": "Example Inc.",
+        "name": "ExampleSBOMGenerator",
+        "version": "2.1.0"
+      }
+    ],
+    "component": {
+      "type": "application",
+      "name": "example-webapp-cyclone",
+      "version": "2.5.1",
+      "purl": "pkg:npm/example-webapp@2.5.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "express",
+      "version": "4.18.2",
+      "purl": "pkg:npm/express@4.18.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "bom-ref": "pkg:npm/express@4.18.2"
+    },
+    {
+      "type": "library",
+      "name": "body-parser",
+      "version": "1.20.2",
+      "purl": "pkg:npm/body-parser@1.20.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "bom-ref": "pkg:npm/body-parser@1.20.2"
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:npm/example-webapp@2.5.1",
+      "dependsOn": [
+        "pkg:npm/express@4.18.2",
+        "pkg:npm/body-parser@1.20.2"
+      ]
+    }
+  ]
+}
